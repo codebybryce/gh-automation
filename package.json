@@ -1,0 +1,25 @@
+{
+  "name": "gh-automation-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "test": "jest"
+    },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.7",
+    "nodemon": "^3.1.9",
+    "openai": "^4.83.0",
+    "simple-git": "^3.27.0",
+    "sqlite3": "^5.1.7"
+  },
+  "type": "module",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
