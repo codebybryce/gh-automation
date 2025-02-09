@@ -1,10 +1,10 @@
-import dotenv from 'dotenv/config'
-import {getRegex , updateRegexAnswered} from './services/dbService.js'
-import { generateRegex } from './services/openaiService.js';
-import {appendRegexFile , handleCommit} from './services/repoUpdateService.js'
+import 'dotenv/config'
+import {getRegex , updateRegexAnswered} from '../services/dbService.js'
+import { generateRegex } from '../services/openaiService.js';
+import {appendRegexFile , handleCommit} from '../services/repoUpdateService.js'
 import dayjs from 'dayjs';
-import { logger } from './services/loggerService.js';
-import express from 'express'
+import { logger } from '../services/loggerService.js';
+
 
 function dailyRegex(){
     getRegex()
@@ -26,5 +26,7 @@ function dailyRegex(){
             })
         })
     })
-}
-dailyRegex()
+} 
+
+// dailyRegex()
+console.log("hello")
