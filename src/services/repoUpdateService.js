@@ -28,7 +28,8 @@ export async function appendRegexFile(message) {
  * @param {string} time 
  */
 export async function handleCommit(message, time) {
-    git.add('.')
+    git.pull('origin', 'main')
+    .add('.')
     .commit(`Daily Update - ${message}`, { "--date": time }, (error => error && console.error(error)))
     .push('origin', 'main', (error) => error && console.error(error))
 }

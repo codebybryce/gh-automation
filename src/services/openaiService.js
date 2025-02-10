@@ -1,5 +1,6 @@
 import { openai } from "../config/openaiConfig.js";
 import dayjs from "dayjs";
+import { logger } from "./loggerService.js";
 /**
  * 
  * @param {string} useCase 
@@ -20,5 +21,7 @@ export const generateRegex = async (useCase) => {
     });
     let { content } = completion.choices[0].message;
     console.log(`${dayjs().format()}:   ${content}`)
-    return content.replace('```javascript\n', '').replace('```', '')
+    content = content.replace('```javascript\n', '').replace('```', '');
+    logger(`generateRegex success! ${content}`)
+    return content
 }
