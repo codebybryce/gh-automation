@@ -72,8 +72,8 @@ Run the following commands to apply the new services and timers:
 
 
 sudo systemctl daemon-reload
-sudo systemctl enable update-regex.timer script2.timer
-sudo systemctl start update-regex.timer script2.timer
+sudo systemctl enable update-regex.timer
+sudo systemctl start update-regex.timer
 
 Step 4: Verify the Timers
 Check the status of all timers:
@@ -107,4 +107,31 @@ sudo systemctl disable update-regex.timer
 Conclusion
 Using systemd timers ensures that your Node.js scripts run at specific intervals reliably. They provide better logging, error handling, and restart capabilities compared to cron.
 
+```
+
+Edit service file
+```bash
+sudo nano /etc/systemd/system/update-regex.service
+```
+Read Logs
+```bash
+sudo nano /var/log/update-regex.log
+```
+
+Disable Autostart
+```bash
+sudo systemctl disable update-regex.timer
+```
+
+Start
+```bash
+sudo systemctl start update-regex.timer
+```
+Stop
+```bash
+sudo systemctl stop update-regex.timer
+```
+Restart
+```bash
+sudo systemctl restart update-regex.timer
 ```
