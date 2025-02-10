@@ -17,10 +17,7 @@ function dailyRegex(){
         generateRegex(useCase).then(res => {
             appendRegexFile(res)
             .catch(err => console.error(err))
-            .then(response => {
-                if(!response.ok){
-                    logger(`${dayjs().format()}  Error with GPT`)
-                }
+            .then(() => {
                 handleCommit(useCase, dayjs().format()).catch(err => console.error(`${dayjs().format()}  ${err}`))
                 updateRegexAnswered(id,true)
             })
