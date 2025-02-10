@@ -55,6 +55,7 @@ export const getRegex = () => {
     }))
   }
 
+
 export const updateRegexAnswered = async (id, answered) =>{
   db.run(`UPDATE regexPatterns SET answered = ? WHERE id = ?`,
   [answered, id],
